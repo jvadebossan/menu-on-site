@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
-import { Search } from "lucide-react";
+
+import SearchBar from "./components/SearchBar";
 
 export default function Loja() {
   const id = useParams().id;
@@ -10,8 +11,8 @@ export default function Loja() {
 
   return (
     <>
-      <div className="flex column justify-center items-center h-screen">
-        <Search />
+      <div className="flex column justify-center items-start h-screen p-3">
+        <SearchBar />
       </div>
     </>
   );
