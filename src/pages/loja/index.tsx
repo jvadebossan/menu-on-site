@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import SearchBar from "./components/SearchBar";
 import ShopBanner from "./components/ShopBanner";
+import Categories from "./components/Categories";
 
 export default function Loja() {
   const id = useParams().id;
@@ -26,6 +27,15 @@ export default function Loja() {
           />
           <br />
           <SearchBar />
+          <Categories
+            categoriesList={[
+              "Promoções",
+              "Mais pedidos",
+              "Veganos",
+              "Doces",
+              "Bebidas",
+            ]}
+          />
         </div>
       </div>
     </>
