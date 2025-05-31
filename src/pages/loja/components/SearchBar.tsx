@@ -9,7 +9,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="bg-neutral-100 w-full flex justify-end items-center py-1 rounded-3xl">
+    <div className="bg-neutral-200 w-full flex justify-end items-center py-1 rounded-3xl">
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex items-center w-full"
@@ -17,11 +17,11 @@ export default function SearchBar() {
         <input
           required={true}
           type="text"
-          placeholder="Search..."
+          placeholder="O que você quer comer hoje?"
           {...register("search")}
           className="bg-transparent outline-none flex-1 py-1 px-2 ml-2 "
         />
-        <Search className="bg-neutral-200 p-1 mr-1.5 rounded-3xl size-8" />
+        <Search className="p-1 mr-1.5 rounded-3xl size-8" />
       </form>
     </div>
   );

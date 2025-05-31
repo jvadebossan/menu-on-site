@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 
 import SearchBar from "./components/SearchBar";
+import ShopBanner from "./components/ShopBanner";
 
 export default function Loja() {
   const id = useParams().id;
@@ -11,8 +12,9 @@ export default function Loja() {
 
   return (
     <>
-      <div className="flex column justify-center items-start h-screen p-3">
+      <div className="flex flex-col justify-start items-start h-screen p-3 bg-neutral-100">
         <SearchBar />
+        <ShopBanner />
       </div>
     </>
   );
