@@ -1,19 +1,22 @@
-export default function ShopBanner() {
+import { Button } from "@/components/ui/button";
+
+type ShopBannerProps = {
+  name: string;
+  desc: string;
+};
+
+export default function ShopBanner({ name, desc }: ShopBannerProps) {
   return (
-    <>
-      <div className="w-full flex justify-center items-center mt-6">
-        <img
-          src="/logo.svg" //src="https://placehold.co/96x96/FF5E32/FFFFFF/?text=LOGO"
-          alt="Shop Banner"
-          className="w-[30%] min-w-[96px] max-w-[256px] rounded-full shadow-lg"
-        />
-        <div className="pl-5 w-full flex-col justify-center items-center">
-          <h1 className="text-2xl font-bold text-neutral-800">Nome da Loja</h1>
-          <h2 className="pt-2 text-sm font-medium text-neutral-700">
-            O texto contendo a descrição da loja deve ser inserido aqui.
-          </h2>
-        </div>
-      </div>
-    </>
+    <div className="w-full flex-col justify-center items-center">
+      <h1 className="text-3xl font-bold text-neutral-800">{name}</h1>
+      <h2 className="py-2 text-1sm font-semibold text-neutral-500">{desc}</h2>
+      <Button
+        variant="link"
+        className="text-sm text-orange-500 font-semibold p-0 h-auto cursor-pointer hover:underline"
+        asChild
+      >
+        <a href="#">Saiba mais</a>
+      </Button>
+    </div>
   );
 }
