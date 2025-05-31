@@ -1,14 +1,11 @@
-import { Button } from "@/components/ui/button"
-import './App.css'
-
-
 function App() {
-
   return (
     <>
-      <Button></Button>
+      <div className="flex column justify-center items-center h-screen">
+        <p>home</p>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
