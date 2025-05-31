@@ -7,16 +7,16 @@ type ShopBannerProps = {
 
 export default function ShopBanner({ name, desc }: ShopBannerProps) {
   return (
-    <div className="w-full flex-col justify-center items-center">
-      <h1 className="text-3xl font-bold text-neutral-800">{name}</h1>
-      <h2 className="py-2 text-1sm font-semibold text-neutral-500">{desc}</h2>
+    <div className="w-full flex-col justify-center items-center mb-3">
+      <h1 className="text-3xl font-bold text-neutral-700">{name}</h1>
+      <p className="py-2 text-1sm font-normal text-neutral-500 text-justify leading-5">
+        {desc}
+      </p>
       <Button
         variant="link"
-        className="text-sm text-orange-500 font-semibold p-0 h-auto cursor-pointer hover:underline"
+        className="text-sm text-orange-500 font-semibold h-auto cursor-pointer hover:underline"
         asChild
-      >
-        <a href="#">Saiba mais</a>
-      </Button>
+      ></Button>
     </div>
   );
 }

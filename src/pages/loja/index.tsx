@@ -23,19 +23,18 @@ export default function Loja() {
   return (
     <>
       <img
-        src="https://i.ibb.co/SD0WzT8w/image.png" //"https://placehold.co/250x120/FF5E32/FFFFFF/?text=SHOP-IMAGE"
+        src="https://i.ibb.co/TB9WLpQz/imagem-2025-05-31-203204302.png"
         alt="Shop Image"
         className="w-full h-auto"
       />
       <div className="flex flex-col justify-start items-start h-auto bg-neutral-200 p-3">
-        <div className="w-full h-auto bg-neutral-100 flex flex-col justify-start items-start -mt-10 rounded-2xl shadow-lg p-4">
+        <div className="w-full h-auto bg-neutral-100 flex flex-col justify-start items-start -mt-10 rounded-2xl shadow-lg p-4 overflow-y-hidden scrollbar-none">
           <ShopBanner
             name={"Mestre Dos Burguers"}
             desc={
               "O texto contendo a descrição da loja deve ser inserido aqui. O texto contendo a descrição da loja deve ser inserido aqui."
             }
           />
-          <br />
           <SearchBar />
           <Categories
             categoriesList={[
