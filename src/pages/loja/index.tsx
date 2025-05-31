@@ -28,7 +28,7 @@ export default function Loja() {
         className="w-full h-auto"
       />
       <div className="flex flex-col justify-start items-start h-auto bg-neutral-200 p-3">
-        <div className="w-full h-auto bg-neutral-100 flex flex-col justify-start items-start -mt-10 rounded-2xl shadow-lg p-4 overflow-y-hidden scrollbar-none">
+        <div className="w-full h-auto bg-neutral-100 flex flex-col justify-start items-start -mt-10 rounded-2xl shadow-lg p-4">
           <ShopBanner
             name={"Mestre Dos Burguers"}
             desc={

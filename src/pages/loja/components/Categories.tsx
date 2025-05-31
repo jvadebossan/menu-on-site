@@ -13,20 +13,25 @@ export default function Categories({ categoriesList }: CategoriesProps) {
   return (
     <div className="mt-1 w-full flex items-center h-16 overflow-x-auto scrollbar-none">
       <div className="flex items-center min-w-max whitespace-nowrap">
-        {categoriesList.map((category) => (
-          <Button
-            key={category}
-            variant="ghost"
-            onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 mx-1 text-1sm font-semibold text-neutral-700 bg-transparent shadow-none rounded-none border-b-2 decoration-none ${
-              selectedCategory === category
-                ? "border-orange-500 text-orange-500"
-                : "border-transparent"
-            }`}
-          >
-            {category}
-          </Button>
-        ))}
+        {categoriesList.map((category) => {
+          const isSelected = selectedCategory === category;
+          return (
+            <Button
+              key={category}
+              variant="ghost"
+              onClick={() => setSelectedCategory(category)}
+              className={`px-4 py-2 mx-1 text-1sm font-semibold bg-transparent shadow-none rounded-none border-b-2 decoration-none hover:text-orange-500
+              ${
+                isSelected
+                  ? "border-orange-500 text-orange-500"
+                  : "border-transparent text-neutral-700"
+              }
+            `}
+            >
+              {category}
+            </Button>
+          );
+        })}
       </div>
     </div>
   );
