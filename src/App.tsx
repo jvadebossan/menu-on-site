@@ -1,10 +1,19 @@
+import { BrowserRouter, Routes, Route } from "react-router";
+import Loja from "./pages/loja";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 function App() {
+  const queryClient = new QueryClient();
+
   return (
-    <>
-      <div className="flex column justify-center items-center h-screen">
-        <p>home</p>
-      </div>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<h1>Home</h1>} />
+          <Route path="/loja/:id" element={<Loja />} />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
   );
 }
 
