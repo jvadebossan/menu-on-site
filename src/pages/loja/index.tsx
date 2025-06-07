@@ -37,7 +37,7 @@ export default function Loja() {
   return (
     <>
       <img
-        src="https://i.ibb.co/TB9WLpQz/imagem-2025-05-31-203204302.png"
+        src="https://storage.googleapis.com/menu-on-bucket/dev/burguer.png"
         alt="Shop Image"
         className="w-full h-auto"
       />
