@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "http://34.174.26.165:5000/api",
+  baseURL: "https://back.dev.menunow.com.br/api",
 });
 axiosInstance.interceptors.request.use(
   (config) => {
